@@ -63,7 +63,7 @@ mongoose.connect(db)
 
 var today;
 var PATIENT = 'U135E4DG9'
-var CHANNEL = 'D1359F8H3'//'C1357PUCB'
+var CHANNEL = 'C1357PUCB'
 var token   = process.env.DIABOTESE_TOKEN
 
 var rtm = new RtmClient(token);
