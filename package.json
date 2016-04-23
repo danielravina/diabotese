@@ -1,0 +1,17 @@
+{
+  "name": "diabotese",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.13.0",
+    "mongoose": "^4.4.13",
+    "mongoose-find-one-or-create": "^0.2.0",
+    "slack-client": "^2.0.4"
+  }
+}
