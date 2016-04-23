@@ -79,7 +79,7 @@ rtm.on(RTM_EVENTS.MESSAGE, function (message) {
 
 function isTimeToCheck() {
   var hhmm = moment().format('HHmm')
-  return ['0800', '1043' ,'1200', '1600', '1800', '2300'].indexOf(hhmm) !== -1
+  return ['0800','1200', '1600', '1800', '2300'].indexOf(hhmm) !== -1
 }
 
 function didYouCheckSugar() {
