@@ -62,9 +62,9 @@ var conversation = {
 mongoose.connect(db)
 
 var today;
-var PATIENT  = 'U135E4DG9'
+var PATIENT = 'U135E4DG9'
 var CHANNEL = 'D1359F8H3'//'C1357PUCB'
-var token   = 'xoxb-37178394679-cNKJVTSDRmL2O7cU18cF7Rsk'// process.env.DIABOTESE_TOKEN
+var token   = process.env.DIABOTESE_TOKEN
 
 var rtm = new RtmClient(token);
 rtm.start();
@@ -72,9 +72,9 @@ rtm.start();
 rtm.on(RTM_CLIENT_EVENTS.RTM_CONNECTION_OPENED, function () {
   setTimeout(function(){
     if(isTimeToCheck()) {
+      didYouCheckSugar()
     }
   },60000)
-  didYouCheckSugar()
 })
 
 rtm.on(RTM_EVENTS.MESSAGE, function (message) {
