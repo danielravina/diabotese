@@ -70,15 +70,14 @@ var rtm = new RtmClient(token);
 rtm.start();
 
 rtm.on(RTM_CLIENT_EVENTS.RTM_CONNECTION_OPENED, function () {
-  setTimeout(function(){
+  setInterval(function(){
     if(isTimeToCheck()) {
       didYouCheckSugar()
     }
-  },60000)
+  }, 60000)
 })
 
 rtm.on(RTM_EVENTS.MESSAGE, function (message) {
-  console.log(message)
   if (message.user != PATIENT) return
 
   if (state.check) {
